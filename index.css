@@ -119,6 +119,7 @@ input[type="number"]:focus, select:focus {
     text-align: center;
     background-color: #f9f4b6;
     border-radius: 5px;
+    min-height: 50px;
     font-size: 18px;
     font-weight: bold;
     color: #333;
