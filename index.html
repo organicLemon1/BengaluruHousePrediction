@@ -11,54 +11,55 @@
 <body>
     <div class="background-img"></div>
 
-    <main class="form-container">
-        <form class="form">
-            <h1>Home Price Prediction</h1>
-
+    <div class="container">
+        <h1>Home Price Prediction</h1>
+        
+        <div class="form-group">
             <label for="uiSqft">Area (Square Feet)</label>
-            <input type="number" id="uiSqft" class="area" value="1000">
+            <input type="number" id="uiSqft" value="1000">
+        </div>
 
+        <div class="form-group">
             <label>BHK</label>
             <div class="switch-field">
-                <input type="radio" id="bhk-1" name="uiBHK" value="1"/>
-                <label for="bhk-1">1</label>
-                <input type="radio" id="bhk-2" name="uiBHK" value="2" checked/>
-                <label for="bhk-2">2</label>
-                <input type="radio" id="bhk-3" name="uiBHK" value="3"/>
-                <label for="bhk-3">3</label>
-                <input type="radio" id="bhk-4" name="uiBHK" value="4"/>
-                <label for="bhk-4">4</label>
-                <input type="radio" id="bhk-5" name="uiBHK" value="5"/>
-                <label for="bhk-5">5</label>
+                <input type="radio" id="bhk1" name="uiBHK" value="1">
+                <label for="bhk1">1</label>
+                <input type="radio" id="bhk2" name="uiBHK" value="2" checked>
+                <label for="bhk2">2</label>
+                <input type="radio" id="bhk3" name="uiBHK" value="3">
+                <label for="bhk3">3</label>
+                <input type="radio" id="bhk4" name="uiBHK" value="4">
+                <label for="bhk4">4</label>
+                <input type="radio" id="bhk5" name="uiBHK" value="5">
+                <label for="bhk5">5</label>
             </div>
+        </div>
 
+        <div class="form-group">
             <label>Bathrooms</label>
             <div class="switch-field">
-                <input type="radio" id="bath-1" name="uiBathrooms" value="1"/>
-                <label for="bath-1">1</label>
-                <input type="radio" id="bath-2" name="uiBathrooms" value="2" checked/>
-                <label for="bath-2">2</label>
-                <input type="radio" id="bath-3" name="uiBathrooms" value="3"/>
-                <label for="bath-3">3</label>
-                <input type="radio" id="bath-4" name="uiBathrooms" value="4"/>
-                <label for="bath-4">4</label>
-                <input type="radio" id="bath-5" name="uiBathrooms" value="5"/>
-                <label for="bath-5">5</label>
+                <input type="radio" id="bath1" name="uiBathrooms" value="1">
+                <label for="bath1">1</label>
+                <input type="radio" id="bath2" name="uiBathrooms" value="2" checked>
+                <label for="bath2">2</label>
+                <input type="radio" id="bath3" name="uiBathrooms" value="3">
+                <label for="bath3">3</label>
+                <input type="radio" id="bath4" name="uiBathrooms" value="4">
+                <label for="bath4">4</label>
+                <input type="radio" id="bath5" name="uiBathrooms" value="5">
+                <label for="bath5">5</label>
             </div>
+        </div>
 
+        <div class="form-group">
             <label for="uiLocations">Location</label>
-            <select id="uiLocations" class="location">
+            <select id="uiLocations">
                 <option value="" disabled selected>Choose a Location</option>
-                <option>Electronic City</option>
-                <option>Rajaji Nagar</option>
             </select>
+        </div>
 
-            <button type="button" class="submit" onclick="onClickedEstimatePrice()">Estimate Price</button>
-
-            <div id="uiEstimatedPrice" class="result">
-                <h2></h2>
-            </div>
-        </form>
-    </main>
+        <button onclick="onClickedEstimatePrice()" class="submit-btn">Estimate Price</button>
+        <div id="uiEstimatedPrice" class="result"></div>
+    </div>
 </body>
 </html>
