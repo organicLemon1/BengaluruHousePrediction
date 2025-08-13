@@ -1,73 +1,69 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 body, html {
+    margin: 0;
+    padding: 0;
     height: 100%;
-    background: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .background-img {
     background: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
     background-size: cover;
-    filter: blur(15px);
+    filter: blur(12px);
     position: fixed;
     width: 100%;
     height: 100%;
     z-index: -1;
 }
 
-.form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-form.form {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    width: 320px;
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     color: #333;
 }
 
-label {
-    font-weight: 500;
-    display: block;
-    margin-bottom: 6px;
-    color: #555;
+.form-group {
+    margin-bottom: 20px;
 }
 
-input.area, select.location {
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="number"], select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
     font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     outline: none;
+    cursor: pointer;
 }
 
-input.area:focus, select.location:focus {
+input[type="number"]:focus, select:focus {
     border-color: #a5dc86;
 }
 
 .switch-field {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    margin-top: 8px;
 }
 
 .switch-field input {
@@ -75,48 +71,55 @@ input.area:focus, select.location:focus {
 }
 
 .switch-field label {
-    flex: 1;
-    text-align: center;
-    padding: 8px 0;
-    margin-right: 4px;
-    background: #e4e4e4;
-    border-radius: 6px;
+    background-color: #e4e4e4;
+    color: #555;
+    padding: 8px 14px;
+    margin-right: -1px;
+    border: 1px solid rgba(0,0,0,0.2);
     cursor: pointer;
-    transition: all 0.2s;
+    transition: 0.2s;
 }
 
-.switch-field label:last-child {
-    margin-right: 0;
+.switch-field label:hover {
+    background-color: #c6e2b3;
 }
 
 .switch-field input:checked + label {
-    background: #a5dc86;
+    background-color: #a5dc86;
     color: #fff;
-    font-weight: 500;
 }
 
-button.submit {
+.switch-field label:first-of-type {
+    border-radius: 5px 0 0 5px;
+}
+
+.switch-field label:last-of-type {
+    border-radius: 0 5px 5px 0;
+}
+
+.submit-btn {
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    background: #a5dc86;
+    background-color: #a5dc86;
+    color: #fff;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    font-weight: 500;
-    transition: background 0.2s;
+    transition: 0.2s;
 }
 
-button.submit:hover {
-    background: #8bc869;
+.submit-btn:hover {
+    background-color: #8cc96a;
 }
 
 .result {
     margin-top: 20px;
     padding: 12px;
     text-align: center;
-    font-weight: 500;
+    background-color: #f9f4b6;
+    border-radius: 5px;
     font-size: 18px;
-    background: #f9f871;
-    border-radius: 6px;
+    font-weight: bold;
+    color: #333;
 }
